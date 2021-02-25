@@ -1,0 +1,117 @@
+<div class="main_container">
+ <div class="inner_container">
+ 	<div class="row" style="width:100%;">
+ 	        <div class="col-lg-6">
+ 	          <div class="form_detailes_container" style="background-image: url(<%= asset_path 'bg-01.jpg' %>)">
+ 	          	<div class="black_shadow">
+ 	          		
+ 	          		<div class="form_details_address_container">
+ 	          		   <div class="row" style="width:100%;">	
+ 	          		 	<div class="col-md-6" style="width:10%;">
+ 	          		 <div class="icon_div"><i class="fa fa-map-marker" style="color:white;font-size:25px;" aria-hidden="true"></i></div>
+ 	          		 </div>
+ 	          		 <div class="col-lg-6" style="width:90%;">
+ 	          		 <div class="details_box">	
+                        <div class="details_head">
+                          Address
+                        </div>
+                        <div class="details">
+                        Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+                        </div>
+                        </div>
+ 	          		 </div>
+ 	          		</div>	
+ 	          	</div>
+ 	          		<div class="form_details_call_container">
+ 	          		 <div class="row" style="width:100%;">
+ 	          		 <div class="col-md-6" style="width:10%;">
+ 	          		 <div class="icon_div"><i class="fa fa-phone" style="color:white;font-size:25px;" aria-hidden="true"></i></div>
+ 	          		      </div>
+ 	          		      <div class="col-md-6" style="width:90%;">
+ 	          		      <div class="details_box">	
+                        <div class="details_head">
+                          Lets Talk
+                        </div>
+                        <div class="details" style="color: green;">
+                        +1 800 1236879
+                        </div>
+ 	          		 </div>
+ 	          		 </div>
+ 	          	    </div>
+ 	          	    </div>
+ 	          	    <div class="form_general_support_container">
+ 	          	    	<div class="row" style="width:100%;">
+ 	          	    		<div class="col-md-6" style="width:10%;">
+ 	          	    	<div class="icon_div"><i class="fa fa-envelope" style="color:white;font-size:25px;" aria-hidden="true"></i></div>
+ 	          		      </div>
+ 	          		      <div class="col-md-6" style="width:90%;">
+ 	          		      <div class="details_box">	
+                        <div class="details_head">
+                          General Support
+                        </div>
+                        <div class="details" style="color: green;">
+                        contact@example.com
+                        </div>
+ 	          		 </div>
+ 	          		 </div>
+ 	          	    </div>
+ 	          		</div>
+                  </div>
+ 	          </div>
+            </div>	
+ 	
+            <div  class="col-lg-6 main_form" >
+            	<%= form_for :user, url: users_path, remote: true do |f| %>	
+ 	           <div class="form_validate_container">
+ 	           	<span class="validate_form_header"> Send Us A Message </span>
+ 	           	
+ 	           	<label class="name_label"> Tell us your name *</label>
+ 	           	<div class="first_name_container input_box ">
+ 	           		<div id="first_name_aler_messeage" class="alert_messeage" style=""> Type first name </div>
+ 	           		<i id="first_name_alert" class=" fa fa-exclamation validate_alert" aria-hidden="true" style=""></i>
+ 	           		<%= f.text_field :first_name ,:class=>"input_style validate-input alert-validate" ,:placeholder=>"First name"%>
+ 	           	</div>
+ 	            <div class="last_name_container input_box">
+ 	            	<div id="last_name_aler_messeage" class="alert_messeage " style=""> Type last name </div>
+ 	            	<i id="last_name_alert" class=" fa fa-exclamation validate_alert" aria-hidden="true" style=""></i>
+ 	           		<%= f.text_field :last_name , :class=>"input_style" ,:placeholder=>"Last name"%>
+ 	            </div>
+ 	            
+ 	            <label class="name_label"> Enter your email *</label>
+ 	            <div class="email_container input_box_text">
+ 	            	<div id="email_aler_messeage" class="alert_messeage  alert_single_fields" style=""> Type email </div>
+ 	            	<i id="email_alert" class=" fa fa-exclamation validate_alert" aria-hidden="true" style=""></i>
+ 	           		<%= f.text_field :email , :class=>"input_style" ,:placeholder=>"Eg. example@gmail.com"%>
+ 	            </div>
+ 	            
+ 	            <label class="name_label"> Enter phone number</label>
+ 	            <div class="phone_number_container input_box_text">
+ 	            	
+ 	           		<%= f.text_field :phone_number , :class=>"input_style",:placeholder=>"Eg. +1800 000000"%>
+ 	            </div>
+ 	            
+ 	            <label class="name_label"> Language</label>
+ 	            <div class="language_container input_box_text">
+ 	           		<%= select_tag :language, options_for_select([ "English", "Spanish" ], "English"),:class=>"input_style"%>
+ 	            </div>
+ 	            
+ 	            <label class="name_label"> Message *</label>
+ 	            <div class="messeage_container input_box_text" style="height:110px;">
+ 	            	<div id="alert_messeage" class="alert_messeage alert_single_fields" style=""> Type message </div>
+ 	            	<i id="messeage_alert" class=" fa fa-exclamation validate_alert" aria-hidden="true" style=""></i>
+ 	           		<%= f.text_area :messeage , :class=>"input_style",:placeholder=>"Write us a messeage",:style=>"height:110px;"%>
+ 	            </div>
+ 	            
+ 	            <div id="form_send_button" class="send_button-container">
+ 	            	<%= f.submit :value=>"Send Messeage" , :class=>"send_button input_style",:placeholder=>"Send Messeage" %>
+ 	            </div>				
+               </div>
+               <%end%>
+               </div>		
+ 		</div>
+ 		
+ 		
+ 		
+ <div>		
+ </div>		
+</div> 

@@ -1,0 +1,14 @@
+<%puts"=========hello i am working======="+@errors.inspect%>
+<% unless @user_save_status == true %>
+  <%@errors.each do|error|%>
+    <%if error ==  "First name can't be blank" %>
+    $("#first_name_alert").show();
+    <%elsif error ==  "Last name can't be blank" %>
+    $("#last_name_alert").show();
+    <%elsif error ==  "Email can't be blank" %>
+    $("#email_alert").show();
+    <%else error ==  "Messeage can't be blank" %>
+    $("#messeage_alert").show();
+    <%end%> 
+  <%end%>
+<%end%>
